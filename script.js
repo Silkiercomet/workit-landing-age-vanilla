@@ -18,3 +18,18 @@ const perks=[
         analytics services without hidden costs or unexpected fees.`
     }
 ]
+
+const perkSection = document.querySelector('.perks');
+
+perks.forEach((perk, index) => {
+    let newElement = document.createElement('li');
+    newElement.classList.add('perk');
+    newElement.innerHTML += `
+    <p class="perk__number">${index+1}</p>
+    <div>
+      <header class="perk__header">${perk.title}</header>
+      <p class="perk__para">${perk.description}</p>
+    </div>
+    `;
+    perkSection.appendChild(newElement);
+})
