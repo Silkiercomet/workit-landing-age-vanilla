@@ -1,144 +1,286 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap');
-@import url('https://fonts.cdnfonts.com/css/fraunces-144pt-s000');
-:root{
---dark-purple:#24053E;
---davy-grey:#584D62;
---light-green:#44FFA1;
---ghost-white:#FCF8FF;
---font-fam-heading:'Fraunces 144pt S000', sans-serif;
---font-fam-body: 'Manrope', sans-serif;
---size-L: calc(80/16) + rem;
---line-height-L: calc(80/16) + rem;
---size-M: calc(56/16) + rem;
---line-height-M: calc(64/16) + rem;
---size-S: calc(32/16) + rem;
---line-height-S: calc(40/16) + rem;  
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@600&family=Manrope&display=swap");
+@import url("https://fonts.cdnfonts.com/css/fraunces-144pt-s000");
+:root {
+  --dark-purple: #24053e;
+  --davy-grey: #584d62;
+  --light-green: #44ffa1;
+  --ghost-white: #fcf8ff;
+  --font-fam-heading: "Fraunces 144pt S000", sans-serif;
+  --font-fam-body: "Manrope", sans-serif;
+  --size-L: calc(80 / 16) + rem;
+  --line-height-L: calc(80 / 16) + rem;
+  --size-M: calc(56 / 16) + rem;
+  --line-height-M: calc(64 / 16) + rem;
+  --size-S: calc(32 / 16) + rem;
+  --line-height-S: calc(40 / 16) + rem;
 }
 /*
   1. Use a more-intuitive box-sizing model.
 */
-*, *::before, *::after {
-    box-sizing: border-box;
-  }
-  /*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
     2. Remove default margin
   */
-  * {
-    margin: 0;
-  }
-  /*
+* {
+  margin: 0;
+}
+/*
     3. Allow percentage-based heights in the application
   */
-  html, body {
-    height: 100%;
-  }
-  /*
+html,
+body {
+  height: 100%;
+}
+/*
     Typographic tweaks!
     4. Add accessible line-height
     5. Improve text rendering
   */
-  body {
-    line-height: var(--line-height-S);
-    -webkit-font-smoothing: antialiased;
-    font-family: "Manrope",Helvetica, sans-serif;
-    font-size: var(--size-S);
-  }
-  /*
+body {
+  line-height: var(--line-height-S);
+  -webkit-font-smoothing: antialiased;
+  font-family: "Manrope", Helvetica, sans-serif;
+  font-size: var(--size-S);
+}
+/*
     6. Improve media defaults
   */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  /*
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
     7. Remove built-in form typography styles
   */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  /*
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
     8. Avoid text overflows
   */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-  }
-  h1, h2, header{
-    font-family: "Fraunces", Arial, Helvetica, sans-serif;
-
-  }
-  /*
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+header {
+  font-family: "Fraunces", Arial, Helvetica, sans-serif;
+}
+/*
     9. Create a root stacking context
   */
-  #root, #__next {
-    isolation: isolate;
-  }
-  /* utility classes*/
-  .btn{
-    background-color: var(--light-green);
-    color: var(--dark-purple);
+#root,
+#__next {
+  isolation: isolate;
+}
+/* utility classes*/
+.btn {
+  background-color: var(--light-green);
+  color: var(--dark-purple);
 
-    padding: 10px 15px;
-    border-radius: 2px;
+  padding: 10px 15px;
+  border-radius: 2px;
 
-    font-weight: 600;
-  }
+  font-weight: 600;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
 /* -------------------------------------------------------------------------------------- */
 
 /* hero */
 .hero {
-    min-height: 90vh;
-    padding: 20px;
-    position: relative;
+  min-height: 90vh;
+  padding: 20px;
+  position: relative;
 
-    background-color: var(--dark-purple);
+  background-color: var(--dark-purple);
 
-    border-bottom-left-radius: 50% 7%;
-    border-bottom-right-radius: 50% 7%;
+  border-bottom-left-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
 }
-.hero__navbar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.hero__navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.hero__apply{
-    padding-bottom: 3px;
+.hero__apply {
+  padding-bottom: 3px;
 
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 
-    border-bottom: 3px solid var(--light-green);
+  border-bottom: 3px solid var(--light-green);
 }
 
-.hero__content{
-    position: absolute;
-    display: flex;
-    padding: 20px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 20px;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.hero__content {
+  position: absolute;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  inset: 0;
+  margin: auto;
 }
-.hero__content h1{
-    font-size: 3rem;
-    text-align: center;
+.hero__content h1 {
+  font-size: 3rem;
+  text-align: center;
 
-
-    color: white;
+  color: white;
 }
-.hero__content h1 span{
-    border-bottom: 3px solid var(--light-green);
-    padding-bottom: -2px;
+.hero__content h1 span {
+  border-bottom: 3px solid var(--light-green);
+  padding-bottom: -2px;
 }
-.telephone{
-    position: absolute;
-    bottom: -100px;
-    max-width: 335px;
-    left: 0; 
-    right: 0;
-    margin-inline: auto;
+.telephone {
+  position: absolute;
+  bottom: -100px;
+  max-width: 365px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
 }
 /* hero */
+
+/* perks */
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.perk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.perk div {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 15px;
+  gap: 20px;
+
+  text-align: center;
+}
+.perk__number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  border: 1px solid var(--dark-purple);
+  border-radius: 50%;
+
+  text-align: center;
+  font-family: var(--font-fam-heading);
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: var(--dark-purple);
+}
+
+.perk__header {
+  font-size: 1.8rem;
+  color: var(--dark-purple);
+}
+/* perks */
+
+/* invitation */
+
+.invitation {
+  display: flex;
+
+  flex-direction: column;
+  padding: 0 25px;
+}
+.invitation__pic figure {
+  max-width: 80%;
+  margin-inline: auto;
+  position: relative;
+  bottom: -55px;
+}
+.invitation__content {
+  position: relative;
+  z-index: 99;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 25px;
+  gap: 25px;
+  text-align: center;
+
+  background-color: var(--dark-purple);
+  color: white;
+  line-height: 1.7rem;
+}
+.invitation__content .btn {
+  max-width: fit-content;
+}
+.invitation__content h2 {
+  font-size: 1.8rem;
+}
+/* invitation */
+
+/* footer */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding-bottom: 35px;
+}
+.social__contact {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  gap: 15px;
+}
+.social__contact > * {
+  cursor: pointer;
+}
+.social__contact > * svg path {
+  transition: 300ms ease-in-out;
+}
+.social__contact_facebook:hover svg path {
+  fill: #4267b2;
+}
+.social__contact_twitter:hover svg path {
+  fill: #1da1f2;
+}
+.social__contact_instagram:hover svg path {
+  fill: #d62976;
+}
+/* footer */
