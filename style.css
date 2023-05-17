@@ -363,3 +363,74 @@ imagenes de fondo no conforman ese flow en el documento por lo tanto no salen de
 
 /* invitation */
 }
+/* --------------------------------------------------------------------------------------  desktop */
+@media screen and (min-width:1024px) {
+  body{
+    gap: 200px;
+  }
+  /* hero */
+  .telephone{
+    max-width: 520px;
+  }
+  .hero{
+    background-position: -150px center, 105% 75%;
+  
+    border-bottom-left-radius: 60% 100px;
+    border-bottom-right-radius: 60% 100px;
+  }
+  /* hero */
+  /* perks */
+  .perks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+    flex-direction: none;
+    padding: 100px;
+
+  
+  }
+  .perk {
+    flex-direction: column;
+    gap: 55px;
+    max-width: auto;
+  }
+  
+  .perk div{
+    text-align: center;
+  }
+  /* perks */
+  /* invitation */
+  .invitation{
+    padding-inline: 100px;
+  }
+  .invitation__pic figure {
+    max-width: 35%;
+    margin-inline: 0;
+    left: 0;
+    bottom: -225px;
+    margin-top: -225px;
+  }
+  .invitation__content {
+    max-width: 70%;
+
+    padding: 45px 65px;
+    gap: 25px;
+
+  }
+  /* invitation */
+}
+/* --------------------------------------------------------------------------------------  bigger screens */
+@media screen and (min-width:1311px) {
+  .perks,.invitation,.hero__navbar{
+    max-width: 1300px;
+    margin-inline: auto;
+  }
+}
+@media screen and (min-width:2023px) {
+  .hero{
+    background-position: -250px center, 105% 75%;
+    background-size: 30%, 20%;
+  }
+  .telephone{
+    max-width: 40%;
+  }
+}
