@@ -196,8 +196,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 50px;
-  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
   border: 1px solid var(--dark-purple);
   border-radius: 50%;
 
@@ -284,3 +284,82 @@ footer {
   fill: #d62976;
 }
 /* footer */
+/* --------------------------------------------------------------------------------------  tablet */
+
+@media screen and (min-width:690px) {
+/* hero */
+.hero{
+  min-height: 100vh;
+
+  background-image: url(images/bg-pattern-1.svg), url(images/bg-pattern-2.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: -210px center, 110% 75%;
+
+  
+  border-bottom-left-radius: 60% 20%;
+  border-bottom-right-radius: 60% 20%;
+}
+.telephone{
+  max-width: 450px;
+}
+.hero__content h1{
+  max-width: 14ch;
+  font-size: 3.5rem;
+}
+/* hero */
+
+/* perks */
+
+.perk {
+  flex-direction: row;
+  gap: 15px;
+  max-width: 570px;
+}
+
+.perk div{
+  text-align: left;
+}
+
+/* perks */
+
+/* invitation */
+
+.invitation__pic figure {
+  max-width: 40%;
+  margin-inline: 0;
+  left: 0;
+  margin-top: -55px;
+}
+.invitation__content {
+  overflow-y: visible;
+  max-width: 75%;
+  margin-left: auto;
+  align-items: flex-start;
+  padding: 40px 65px;
+  gap: 25px;
+  text-align: left;
+
+/*overflow solo corresponde a los elementos que existen destro del contenedor, los elementos floating como
+imagenes de fondo no conforman ese flow en el documento por lo tanto no salen de los limites de su contenedor*/
+}
+.invitation__content::after{
+  content: "";
+  position: absolute;
+  bottom: -85px;
+  right: 0px;
+  min-height: 220px;
+  min-width: 220px;
+
+  background-color: transparent;
+  background-image: url(images/bg-pattern-3.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.invitation__content h2{
+  font-size: 2.8rem;
+  line-height: 2.5rem;
+}
+
+/* invitation */
+}
